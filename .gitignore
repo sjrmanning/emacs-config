@@ -1,0 +1,29 @@
+# Git ignore file
+# Emacs temp. files
+\#*\#
+*~
+.#*
+tramp
+
+# ELC
+*.elc
+
+# DS_Store
+.DS_Store
+
+# Emacs cache
+cache/
+
+# Emacs server dir
+server/
+
+# Autocomplete history and other dbs
+ac-comphist.dat
+semanticdb/
+
+# Always keep .gitignore
+!.gitignore
+
+# Org-mode
+.org-id-locations
+*_archive
