@@ -26,3 +26,6 @@
 
 ;; Initialise bindings.
 (require 'init-bindings)
+
+;; Initialise settings.
+(require 'init-settings)

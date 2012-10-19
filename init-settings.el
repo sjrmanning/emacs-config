@@ -16,13 +16,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
-;; Enable backspace and overwrite on region
-(delete-selection-mode 1)
-
-;; Enable downcase/upcase region
-(put 'downcase-region 'disabled nil)
-(put 'upcase-region 'disabled nil)
-
 ;; Enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 
