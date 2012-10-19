@@ -2,8 +2,8 @@
 ;; File: init-defuns.el
 ;; Definitions for custom functions I use.
 
-;; Implement a smarter TAB (EmacsWiki + modifications)
-(defun smart-tab ()
+;; Slightly smarter tab!
+(defun my-smart-tab ()
   "This smart tab is minibuffer compliant: it acts as usual in
     the minibuffer. Else, if mark is active, indents region. Else if
     point is at the end of a symbol, expands it. Else indents the
@@ -16,20 +16,8 @@
         (indent-region (region-beginning)
                        (region-end))
       (if (looking-at "\\_>")
-         (hippie-expand nil)
+	  (hippie-expand nil)
         (insert-tab)))))
-
-;; Multiple buffer isearch
-(defun isearch-multiple-buffers ()
-  "Interactively search through multiple buffers."
-  (interactive)
-  (multi-isearch-buffers
-   (delq nil (mapcar (lambda (buf)
-                       (set-buffer buf)
-                       (and (not (equal major-mode 'dired-mode))
-                            (not (string-match "^[ *]" (buffer-name buf)))
-                            buf))
-                     (buffer-list)))))
 
 ;; Scope-limited iedit
 (defun iedit-dwim (arg)

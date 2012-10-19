@@ -1,6 +1,7 @@
 ;;
 ;; File: init-bindings.el
-;; Set up my custom key-bindings.
+;; Set up my custom global key-bindings.
+;; Local/mode-specific bindings are handled in init-modes.el
 
 ;; C-w to backward kill word
 ;; C-x C-k becomes kill-region
@@ -29,7 +30,7 @@
 (global-set-key (kbd "C-!") 'eshell)
 
 ;; Smart TAB
-(global-set-key (kbd "TAB") 'smart-tab)
+(global-set-key (kbd "TAB") 'my-smart-tab)
 
 ;; Multiple buffer isearch
 (global-set-key (kbd "C-M-z") 'isearch-multiple-buffers)

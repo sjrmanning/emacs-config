@@ -7,13 +7,13 @@
 ;; Initialise the package system.
 (package-initialize)
 
-;; Graphene
-(require 'graphene)
-
 ;; Load-paths
 (setq load-path (cons "~/.emacs.d/"       load-path))
 (setq load-path (cons "~/.emacs.d/lib"    load-path))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lib/color-themes")
+
+;; Graphene
+(require 'graphene)
 
 ;; Initialise display.
 (require 'init-display)

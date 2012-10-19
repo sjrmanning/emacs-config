@@ -41,15 +41,31 @@
 (setq ac-comphist-file "~/.emacs.d/cache/ac-comphist.dat")
 
 ;; Ido-mode settings.
+(ido-mode 1)
+(setq ido-save-directory-list-file "~/.emacs.d/cache/.ido.last"
+      ido-enable-last-directory-history t
+      ido-max-work-directory-list 30
+      ido-max-work-file-list 50
+      ido-use-filename-at-point nil
+      ido-use-url-at-point nil
+      ido-max-prospects 8
+      ido-configm-unique-completion t
+      ido-auto-merge-work-directories-length 0)
+
 ;; Display ido results vertically.
 (setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
 (defun ido-disable-line-trucation () (set (make-local-variable 'truncate-lines) nil))
 (add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-trucation)
 
-;; Required as minibuffer-complete overrides otherwise.
-(add-hook 'ido-setup-hook 
-          (lambda () 
-            (define-key ido-completion-map [tab] 'ido-complete)))
+;; Ido key bindings.
+(defun mp-ido-hook ()
+  (define-key ido-completion-map (kbd "C-h") 'ido-delete-backward-updir)
+  (define-key ido-completion-map (kbd "C-w") 'ido-delete-backward-word-updir)
+  (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
+  (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
+  (define-key ido-completion-map (kbd "C-p") 'ido-prev-match)
+  (define-key ido-completion-map [tab] 'ido-complete))
+(add-hook 'ido-setup-hook 'mp-ido-hook)
 
 ;; Uniquify eases handling of buffers with the same name.
 (require 'uniquify)

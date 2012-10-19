@@ -8,6 +8,9 @@ tramp
 # ELC
 *.elc
 
+# Graphene's geometry details
+.graphene-geometry
+
 # DS_Store
 .DS_Store
 
