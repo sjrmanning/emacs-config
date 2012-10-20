@@ -6,6 +6,9 @@
 (load-theme 'solarized-dark t)
 
 ;; Font
-(set-default-font "Meslo LG L DZ-12")
+;; Checks if the font given exists first.
+(defvar font-name "Meslo LG L DZ-12")
+(unless (null (x-list-fonts font-name))
+  (set-face-font 'default font-name))
 
 (provide 'init-display)
