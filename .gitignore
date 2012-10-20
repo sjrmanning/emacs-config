@@ -8,6 +8,9 @@ tramp
 # ELC
 *.elc
 
+# Packages installed & byte-compiled by elpa
+elpa/
+
 # Graphene's geometry details
 .graphene-geometry
 
