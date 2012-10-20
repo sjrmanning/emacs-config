@@ -29,4 +29,9 @@
 ;; Change eshell directory.
 (setq eshell-directory-name "~/.emacs.d/cache/eshell")
 
+;; Since I use .emacs.d/cache as a temp directory, this checks whether
+;; it exists and creates the directory if necessary.
+(unless (file-exists-p "~/.emacs.d/cache/")
+  (make-directory "~/.emacs.d/cache/"))
+
 (provide 'init-settings)
