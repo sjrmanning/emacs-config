@@ -73,4 +73,8 @@
 ;; iedit provides Sublime-like multiple instance editing.
 (require 'iedit)
 
+;; Change multiple-cursor settings location.
+(require 'multiple-cursors)
+(setq mc/list-file "~/.emacs.d/lib/.mc-lists.el")
+
 (provide 'init-modes)
