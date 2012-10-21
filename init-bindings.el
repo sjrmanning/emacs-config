@@ -57,7 +57,7 @@
 (global-set-key (kbd "C-S-c C-e") 'mc/edit-ends-of-lines)
 (global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
 ;; Rectangular region mode
-(global-set-key (kbd "C-c SPC") 'set-rectangular-region-anchor)
+(global-set-key (kbd "C-c r") 'set-rectangular-region-anchor)
 ;; Based on keywords
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
