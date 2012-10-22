@@ -24,8 +24,7 @@
 (defun ac-cc-mode-setup ()
   (setq ac-clang-complete-executable "~/.emacs.d/lib/bin/clang-complete")
   (setq ac-sources '(ac-source-clang-async))
-  (ac-clang-launch-completion-process)
-  )
+  (ac-clang-launch-completion-process))
 (setq ac-quick-help-delay 0.5)
 
 ;; Add hooks in clang-friendly modes.
@@ -82,7 +81,7 @@
       '((sequence "TODO(t)" "|" "DONE(d!)")
         (sequence "|" "CANCELED(c@/!)")
         (sequence "|" "STALLED(s@/!)")
-        (sequence "VERIFY(v)" "|")
+        (sequence "VERIFY(v@)" "|")
         (sequence "PENDING(p@/!)" "|" )))
 
 (provide 'init-modes)
