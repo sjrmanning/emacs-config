@@ -82,7 +82,7 @@
       '((sequence "TODO(t)" "|" "DONE(d!)")
         (sequence "|" "CANCELED(c@/!)")
         (sequence "|" "STALLED(s@/!)")
-        (sequence "FUTURE(f)" "|")
+        (sequence "VERIFY(v)" "|")
         (sequence "PENDING(p@/!)" "|" )))
 
 (provide 'init-modes)
