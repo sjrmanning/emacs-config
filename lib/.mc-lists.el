@@ -3,8 +3,8 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-        org-delete-backward-char
-        org-self-insert-command
+        beginning-of-visual-line
+        end-of-visual-line
         ))
 
 (setq mc/cmds-to-run-once

@@ -63,4 +63,7 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+;; Magit bindings
+(global-set-key (kbd "C-x g") 'magit-status)
+
 (provide 'init-bindings)
