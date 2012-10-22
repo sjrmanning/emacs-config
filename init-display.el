@@ -9,7 +9,7 @@
 ;; Meslo is larger on Windows, so size differs between `system-type'.
 (defvar font-name (if (eq system-type 'windows-nt)
                       "Meslo LG L DZ-10"
-                      "Meslo LG L DZ-12"))
+                      "Meslo LG L DZ-13"))
 
 ;; Check that given font exists first.
 (unless (null (x-list-fonts font-name))

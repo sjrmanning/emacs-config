@@ -77,4 +77,12 @@
 (require 'multiple-cursors)
 (setq mc/list-file "~/.emacs.d/lib/.mc-lists.el")
 
+;; Org-mode setup.
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "|" "DONE(d!)")
+        (sequence "|" "CANCELED(c@/!)")
+        (sequence "|" "STALLED(s@/!)")
+        (sequence "FUTURE(f)" "|")
+        (sequence "PENDING(p@/!)" "|" )))
+
 (provide 'init-modes)
