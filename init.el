@@ -9,9 +9,6 @@
 ;; Ensure required packages are installed.
 (require 'init-packages)
 
-;; Graphene.
-(require 'graphene)
-
 ;; Initialise display.
 (require 'init-display)
 
@@ -26,3 +23,6 @@
 
 ;; Initialise settings.
 (require 'init-settings)
+
+;; Load Graphene.
+(require 'graphene)
