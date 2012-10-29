@@ -66,4 +66,7 @@
 ;; Magit bindings
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; Org-mode
+(global-set-key (kbd "C-c x") 'org-capture)
+
 (provide 'init-bindings)

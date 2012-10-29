@@ -19,6 +19,7 @@ elpa/
 
 # Emacs cache
 cache/
+bookmarks
 
 # Emacs server dir
 server/

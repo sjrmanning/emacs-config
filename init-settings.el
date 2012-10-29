@@ -34,4 +34,7 @@
 (unless (file-exists-p "~/.emacs.d/cache/")
   (make-directory "~/.emacs.d/cache/"))
 
+;; Change bookmarks file location.
+(setq bookmark-file "~/.emacs.d/lib/bookmarks")
+
 (provide 'init-settings)

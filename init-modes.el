@@ -77,11 +77,25 @@
 (setq mc/list-file "~/.emacs.d/lib/.mc-lists.el")
 
 ;; Org-mode setup.
+;; Keywords.
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d!)")
         (sequence "|" "CANCELED(c@/!)")
         (sequence "|" "STALLED(s@/!)")
         (sequence "VERIFY(v@)" "|")
         (sequence "PENDING(p@/!)" "|" )))
+
+;; Capture settings.
+(setq org-directory "~/Org")
+(setq org-default-notes-file (concat org-directory "/Notes.org"))
+;; Templates.
+(setq org-capture-templates
+      '(("w" "Work Task" entry (file+headline (concat org-directory "/Work.org") "Tasks")
+         "* TODO %?\n %i\n")
+        ("h" "Home Task" entry (file+headline (concat org-directory "/Home.org") "Tasks")
+         "* TODO %?\n %i\n")
+        ("n" "Note" entry (file+headline (concat org-directory "/Notes.org") "Captured")
+         "* %?")
+        ))
 
 (provide 'init-modes)
