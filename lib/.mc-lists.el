@@ -2,11 +2,54 @@
 ;; It keeps track of your preferences for running commands with multiple cursors.
 
 (setq mc/cmds-to-run-for-all
-      '(
-        autopair-backspace
-        cua-delete-region
-        ))
+      '(ac-complete
+        back-to-indentation-or-beginning
+        c-electric-backspace
+        c-electric-delete-forward
+        c-electric-paren
+        c-electric-semi&comma
+        c-electric-slash
+        change-inner
+        change-number-at-point
+        change-outer
+        cua-replace-region
+        cua-set-mark
+        delete-blank-lines
+        dired-back-to-start-of-files
+        duplicate-current-line-or-region
+        eval-and-replace
+        forward-paragraph
+        isearch-forward-use-region
+        js2-beginning-of-line
+        js2-end-of-line
+        js2-insert-and-indent
+        js2r-inline-var
+        js2r-var-to-this
+        kill-region-or-backward-word
+        magit-stage-item
+        markdown-enter-key
+        move-line-down
+        move-line-up
+        org-delete-backward-char
+        org-metaleft
+        org-metaright
+        org-self-insert-command
+        org-shiftright
+        orgtbl-self-insert-command
+        quoted-insert
+        save-region-or-current-line
+        sgml-slash
+        slime-space
+        wrap-region-trigger
+        yank-indented
+        yas/expand))
 
 (setq mc/cmds-to-run-once
       '(
+        eval-expression
+        quit-window
+        sgml-maybe-name-self
+        toggle-read-only
+        view-echo-area-messages
+        wgrep-change-to-wgrep-mode
         ))
