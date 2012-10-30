@@ -3,14 +3,10 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-        org-beginning-of-line
-        org-delete-backward-char
-        org-delete-char
-        org-return-indent
-        org-self-insert-command
+        autopair-backspace
+        cua-delete-region
         ))
 
 (setq mc/cmds-to-run-once
       '(
-        org-return
         ))
