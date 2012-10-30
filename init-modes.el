@@ -21,7 +21,7 @@
 
 ;; Auto-complete configuration.
 ;; Clang-completion specific.
-(defun ac-cc-mode-setup ()
+(defun ac-clang-mode-setup ()
   (setq ac-clang-complete-executable "~/.emacs.d/etc/bin/clang-complete")
   (setq ac-sources '(ac-source-clang-async))
   (ac-clang-launch-completion-process))
@@ -29,8 +29,8 @@
 
 ;; Add hooks in clang-friendly modes.
 (defun my-ac-config ()
-  (add-hook 'c-mode-common-hook 'ac-cc-mode-setup)
-  (add-hook 'objc-mode-common-hook 'ac-cc-mode-setup))
+  (add-hook 'c-mode-common-hook 'ac-clang-mode-setup)
+  (add-hook 'objc-mode-common-hook 'ac-clang-mode-setup))
 (my-ac-config)
 
 ;; Enable menu-map to use custom bindings.
