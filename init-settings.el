@@ -34,7 +34,12 @@
 (unless (file-exists-p "~/.emacs.d/cache/")
   (make-directory "~/.emacs.d/cache/"))
 
+;; Do the same for .emacs.d/etc, which is used for settings files
+;; and other similar stuff (keeping lib/ solely for .el files).
+(unless (file-exists-p "~/.emacs.d/etc/")
+  (make-directory "~/.emacs.d/etc/"))
+
 ;; Change bookmarks file location.
-(setq bookmark-file "~/.emacs.d/lib/bookmarks")
+(setq bookmark-file "~/.emacs.d/etc/bookmarks")
 
 (provide 'init-settings)

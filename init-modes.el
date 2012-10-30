@@ -22,7 +22,7 @@
 ;; Auto-complete configuration.
 ;; Clang-completion specific.
 (defun ac-cc-mode-setup ()
-  (setq ac-clang-complete-executable "~/.emacs.d/lib/bin/clang-complete")
+  (setq ac-clang-complete-executable "~/.emacs.d/etc/bin/clang-complete")
   (setq ac-sources '(ac-source-clang-async))
   (ac-clang-launch-completion-process))
 (setq ac-quick-help-delay 0.5)
@@ -74,7 +74,7 @@
 
 ;; Change multiple-cursor settings location.
 (require 'multiple-cursors)
-(setq mc/list-file "~/.emacs.d/lib/.mc-lists.el")
+(setq mc/list-file "~/.emacs.d/etc/.mc-lists.el")
 
 ;; Org-mode setup.
 ;; Keywords.

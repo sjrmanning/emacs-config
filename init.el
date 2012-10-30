@@ -9,6 +9,9 @@
 ;; Ensure required packages are installed.
 (require 'init-packages)
 
+;; Initialise settings.
+(require 'init-settings)
+
 ;; Initialise display.
 (require 'init-display)
 
@@ -20,9 +23,6 @@
 
 ;; Initialise bindings.
 (require 'init-bindings)
-
-;; Initialise settings.
-(require 'init-settings)
 
 ;; Load Graphene.
 (require 'graphene)
