@@ -121,4 +121,8 @@
                              (add-to-list 'ac-sources 'ac-source-emacs-eclim)
                              (add-to-list 'ac-sources 'ac-source-emacs-eclim-c-dot)))
 
+;; Setup markdown-mode autoload.
+(setq auto-mode-alist
+      (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
 (provide 'init-modes)
