@@ -31,7 +31,10 @@
 (defun my-ac-config ()
   (add-hook 'c-mode-common-hook 'ac-clang-mode-setup)
   (add-hook 'objc-mode-common-hook 'ac-clang-mode-setup))
-(my-ac-config)
+
+;; Only use clang autocomplete on OS X.
+(if (eq system-type 'darwin)
+    (my-ac-config))
 
 ;; Enable menu-map to use custom bindings.
 (setq ac-use-menu-map t)
