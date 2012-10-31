@@ -14,7 +14,7 @@
 
 ;; Define what packages are required from package.el.
 (defvar required-packages
-  '(graphene multiple-cursors magit)
+  '(graphene multiple-cursors magit markdown-mode markdown-mode+)
   "A list of packages to ensure are installed at launch.")
 
 (defun required-packages-installed-p ()
