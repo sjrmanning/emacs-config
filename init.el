@@ -9,6 +9,9 @@
 ;; Ensure required packages are installed.
 (require 'init-packages)
 
+;; Load Graphene.
+(require 'graphene)
+
 ;; Initialise settings.
 (require 'init-settings)
 
@@ -23,6 +26,3 @@
 
 ;; Initialise bindings.
 (require 'init-bindings)
-
-;; Load Graphene.
-(require 'graphene)
