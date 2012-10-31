@@ -106,4 +106,16 @@
             (add-to-list 'gud-jdb-classpath
                          "~/Dev/android-sdk-macosx/platforms/android-16/android.jar")))
 
+;; Eclim!
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lib/emacs-eclim"))
+(require 'eclim)
+(setq eclim-auto-save t)
+(global-eclim-mode)
+
+;; Integrate eclim with autocomplete.
+(require 'ac-emacs-eclim-source)
+(add-hook 'eclim-mode-hook (lambda ()
+                             (add-to-list 'ac-sources 'ac-source-emacs-eclim)
+                             (add-to-list 'ac-sources 'ac-source-emacs-eclim-c-dot)))
+
 (provide 'init-modes)
