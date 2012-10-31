@@ -98,4 +98,12 @@
          "* %?")
         ))
 
+;; Android support.
+(require 'android-mode)
+(setq android-mode-sdk-dir "~/Dev/android-sdk-macosx/")
+(add-hook 'gud-mode-hook
+          (lambda ()
+            (add-to-list 'gud-jdb-classpath
+                         "~/Dev/android-sdk-macosx/platforms/android-16/android.jar")))
+
 (provide 'init-modes)
