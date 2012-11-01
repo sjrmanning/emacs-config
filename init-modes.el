@@ -29,8 +29,8 @@
 
 ;; Add hooks in clang-friendly modes.
 (defun my-ac-config ()
-  (add-hook 'c-mode-common-hook 'ac-clang-mode-setup)
-  (add-hook 'objc-mode-common-hook 'ac-clang-mode-setup))
+  (add-hook 'c-mode-hook 'ac-clang-mode-setup)
+  (add-hook 'objc-mode-hook 'ac-clang-mode-setup))
 
 ;; Only use clang autocomplete on OS X.
 (if (eq system-type 'darwin)
