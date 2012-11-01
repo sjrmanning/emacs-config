@@ -125,4 +125,7 @@
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
+;; Add csharp-mode to graphene's prog-modes.
+(push 'csharp-mode-hook graphene-prog-mode-hooks)
+
 (provide 'init-modes)
