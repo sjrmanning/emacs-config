@@ -32,9 +32,10 @@
   (add-hook 'c-mode-hook 'ac-clang-mode-setup)
   (add-hook 'objc-mode-hook 'ac-clang-mode-setup))
 
-;; Only use clang autocomplete on OS X.
-(if (eq system-type 'darwin)
-    (my-ac-config))
+;; Only use clang autocomplete under OS X with clang installed.
+(when (and (eq system-type 'darwin)
+           (file-exists-p "/usr/local/bin/clang"))
+  (my-ac-config))
 
 ;; Enable menu-map to use custom bindings.
 (setq ac-use-menu-map t)
