@@ -19,7 +19,8 @@
     magit
     markdown-mode
     markdown-mode+
-    csharp-mode)
+    csharp-mode
+    yasnippet)
   "A list of packages to ensure are installed at launch.")
 
 ;; Function for determining if packages are installed.

@@ -129,4 +129,19 @@
 ;; Add csharp-mode to graphene's prog-modes.
 (push 'csharp-mode-hook graphene-prog-mode-hooks)
 
+;; Yasnippet setup.
+(require 'yasnippet)
+
+;; If custom snippets dir doesn't exist, create it.
+;; We want to replace .emacs.d/snippets with .emacs.d/etc/snippets.
+(defvar custom-snippets-dir "~/.emacs.d/etc/snippets/")
+(unless (file-exists-p custom-snippets-dir)
+  (make-directory custom-snippets-dir))
+
+;; Trim out default custom snippet dir and append the one created above.
+(setq yas-snippet-dirs (last yas-snippet-dirs 1))
+(add-to-list 'yas-snippet-dirs custom-snippets-dir t)
+
+(yas--initialize)
+
 (provide 'init-modes)
