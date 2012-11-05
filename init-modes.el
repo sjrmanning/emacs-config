@@ -99,7 +99,7 @@
         ("h" "Home Task" entry (file+headline (concat org-directory "/Home.org") "Tasks")
          "* TODO %?\n %i\n")
         ("n" "Note" entry (file+headline (concat org-directory "/Notes.org") "Captured")
-         "* %?")
+         "* %^{Description} %T %^G\n %i%?\n %A")
         ))
 
 ;; Android support.
