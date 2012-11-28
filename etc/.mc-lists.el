@@ -2,7 +2,8 @@
 ;; It keeps track of your preferences for running commands with multiple cursors.
 
 (setq mc/cmds-to-run-for-all
-      '(ac-complete
+      '(
+        ac-complete
         back-to-indentation-or-beginning
         c-electric-backspace
         c-electric-delete-forward
