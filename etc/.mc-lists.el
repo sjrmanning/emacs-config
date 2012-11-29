@@ -43,7 +43,8 @@
         slime-space
         wrap-region-trigger
         yank-indented
-        yas/expand))
+        yas/expand
+        ))
 
 (setq mc/cmds-to-run-once
       '(
