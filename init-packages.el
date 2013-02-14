@@ -15,6 +15,7 @@
 ;; Define what packages are required from package.el.
 (defvar required-packages
   '(graphene
+    autopair
     multiple-cursors
     magit
     markdown-mode
