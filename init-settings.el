@@ -12,6 +12,12 @@
 (setq c-default-style "bsd"
       c-basic-offset 4)
 
+;; Disable smartparens because it breaks indentation.
+(setq graphene-autopair-auto nil)
+
+;; Enable Emacs 24 built-in pair mode.
+(electric-pair-mode t)
+
 ;; Tabs => Spaces (4)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
