@@ -13,6 +13,10 @@
 (require 'edit-server)
 (edit-server-start)
 
+;; Tramp-mode on windows needs plink.
+(when (eq system-type 'windows-nt)
+  (setq tramp-default-method "plink"))
+
 ;; Ace-jump.
 (require 'ace-jump-mode)
 
