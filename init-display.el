@@ -6,11 +6,11 @@
 (load-theme 'solarized-dark t)
 
 ;; Set custom font.
-;; Meslo is larger on Windows, so size differs between `system-type'.
-(defvar font-name "Meslo LG L DZ")
+;; Inconsolata is larger on Windows, so size differs between `system-type'.
+(defvar font-name "Inconsolata-g")
 (defvar font-size (if (eq system-type 'windows-nt)
                       10
-                      13))
+                      12))
 (defvar font-string (format "%s-%d" font-name font-size))
 
 ;; Ensure font exists first.
