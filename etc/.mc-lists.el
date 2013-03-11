@@ -4,9 +4,15 @@
 (setq mc/cmds-to-run-for-all
       '(
         ac-complete
+        adv-dash
+        adv-dot
+        adv-enter
+        adv-open-curly
+        adv-tab
         back-to-indentation-or-beginning
         backward-sexp
         c-electric-backspace
+        c-electric-colon
         c-electric-delete-forward
         c-electric-paren
         c-electric-semi&comma
@@ -20,6 +26,7 @@
         dired-back-to-start-of-files
         duplicate-current-line-or-region
         end-of-buffer
+        end-of-visual-line
         eval-and-replace
         fold-this
         forward-paragraph
@@ -54,10 +61,14 @@
         org-self-insert-command
         org-shiftright
         orgtbl-self-insert-command
+        paredit-backslash
         paredit-backward
+        paredit-backward-up
         paredit-close-square
         paredit-doublequote
+        paredit-forward
         paredit-forward-delete
+        paredit-forward-down
         paredit-forward-kill-word
         paredit-forward-slurp-sexp
         paredit-forward-up
@@ -71,7 +82,9 @@
         paredit-raise-sexp
         paredit-semicolon
         paredit-splice-sexp
+        paredit-split-sexp
         paredit-wrap-round
+        paredit-wrap-round-from-behind
         paredit-wrap-square
         quoted-insert
         save-region-or-current-line
@@ -80,7 +93,9 @@
         skeleton-pair-insert-maybe
         slime-space
         sp-self-insert-command
+        tagedit-insert-equal
         tagedit-kill-attribute
+        touch-buffer-file
         transpose-sexps
         wrap-region-trigger
         yank-indented
@@ -90,12 +105,19 @@
 
 (setq mc/cmds-to-run-once
       '(
+        adv-insert-new-number
         dired-toggle-read-only
         eval-expression
         goto-line-with-feedback
+        handle-switch-frame
         ido-switch-buffer
         js2r-extract-var
         js2r-rename-var
+        magit-status
+        mc/add-cursor-on-click
+        mc/add-cursors-to-all-matches
         smex
         wgrep-change-to-wgrep-mode
+        wgrep-finish-edit
+        wgrep-save-all-buffers
         ))

@@ -7,7 +7,7 @@
 
 ;; Set custom font.
 ;; Inconsolata is larger on Windows, so size differs between `system-type'.
-(defvar font-name "Inconsolata-g")
+(defvar font-name "Inconsolata LGC")
 (defvar font-size (if (eq system-type 'windows-nt)
                       10
                       12))

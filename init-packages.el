@@ -16,6 +16,7 @@
 (defvar required-packages
   '(graphene
     autopair
+    emacs-eclim
     multiple-cursors
     magit
     markdown-mode
