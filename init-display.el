@@ -6,11 +6,11 @@
 (load-theme 'solarized-dark t)
 
 ;; Set custom font.
-;; Inconsolata is larger on Windows, so size differs between `system-type'.
-(defvar font-name "Inconsolata LGC")
+;; Fonts larger on Windows (or home pixel density), so size differs between `system-type'.
+(defvar font-name "Consolas")
 (defvar font-size (if (eq system-type 'windows-nt)
                       10
-                      12))
+                      13))
 (defvar font-string (format "%s-%d" font-name font-size))
 
 ;; Ensure font exists first.
