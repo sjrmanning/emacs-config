@@ -129,6 +129,13 @@
 ;; Android support.
 (require 'android-mode)
 (setq android-mode-sdk-dir "~/Dev/android-sdk-macosx/")
+(add-hook 'android-mode-hook
+          (lambda ()
+            (define-key android-mode-map (kbd "C-x r")
+              (lambda ()
+                (interactive)
+                (android-build-with-eshell)))
+            (setq c-basic-offset 2)))
 (add-hook 'gud-mode-hook
           (lambda ()
             (add-to-list 'gud-jdb-classpath

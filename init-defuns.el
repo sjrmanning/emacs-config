@@ -19,6 +19,24 @@
 	  (hippie-expand nil)
         (insert-tab)))))
 
+;; Android build/run/install via eshell.
+(defun android-build-with-eshell ()
+  "Builds and runs with ant debug install run via eshell."
+  (interactive)
+  (require 'eshell)
+  (let ((command "ant debug install run"))
+    (let ((buf (current-buffer)))
+      (unless (get-buffer eshell-buffer-name)
+        (eshell))
+      (display-buffer eshell-buffer-name t)
+      (switch-to-buffer-other-window eshell-buffer-name)
+      (end-of-buffer)
+      (eshell-kill-input)
+      (insert command)
+      (eshell-send-input)
+      (end-of-buffer)
+      (switch-to-buffer-other-window buf))))
+
 ;; Scope-limited iedit
 (defun iedit-dwim (arg)
   "Starts iedit but uses \\[narrow-to-defun] to limit its scope."
