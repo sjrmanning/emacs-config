@@ -16,6 +16,33 @@
 ;; Goto-line
 (global-set-key "\M-g" 'goto-line)
 
+;; Joins following line onto current line.
+(global-set-key (kbd "M-j")
+                (lambda ()
+                  (interactive)
+                  (join-line -1)))
+
+;; Moving around a bit quicker (5x C-n, C-f etc.) with Shift.
+(global-set-key (kbd "C-S-n")
+                (lambda ()
+                  (interactive)
+                  (ignore-errors (next-line 5))))
+
+(global-set-key (kbd "C-S-p")
+                (lambda ()
+                  (interactive)
+                  (ignore-errors (previous-line 5))))
+
+(global-set-key (kbd "C-S-f")
+                (lambda ()
+                  (interactive)
+                  (ignore-errors (forward-char 5))))
+
+(global-set-key (kbd "C-S-b")
+                (lambda ()
+                  (interactive)
+                  (ignore-errors (backward-char 5))))
+
 ;; Comment and uncomment region
 (define-key global-map (kbd "s-/") 'comment-region)
 (define-key global-map (kbd "s-.") 'uncomment-region)
