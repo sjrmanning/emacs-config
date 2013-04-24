@@ -141,20 +141,6 @@
             (add-to-list 'gud-jdb-classpath
                          "~/Dev/android-sdk-macosx/platforms/android-16/android.jar")))
 
-;; Eclim!
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/lib/emacs-eclim"))
-(custom-set-variables
- '(eclim-eclipse-dirs '("/Applications/eclipse")))
-(require 'eclim)
-(setq eclim-auto-save t)
-(global-eclim-mode)
-
-;; Integrate eclim with autocomplete.
-(require 'ac-emacs-eclim-source)
-(add-hook 'eclim-mode-hook (lambda ()
-                             (add-to-list 'ac-sources 'ac-source-emacs-eclim)
-                             (add-to-list 'ac-sources 'ac-source-emacs-eclim-c-dot)))
-
 ;; Setup markdown-mode autoload.
 (setq auto-mode-alist
       (cons '("\\.md" . markdown-mode) auto-mode-alist))
@@ -164,6 +150,21 @@
 (push 'csharp-mode-hook graphene-prog-mode-hooks)
 (add-hook 'csharp-mode-hook (lambda ()
                               (autopair-mode 0)))
+
+;; ERC setup.
+(require 'erc-image)
+(add-to-list 'erc-modules 'image)
+(erc-update-modules)
+(require 'erc-match)
+(setq erc-keywords '("simon"))
+(setq erc-autojoin-channels-alist
+      '((".*" "#dev")))
+(setq erc-email-userid "s")
+(defun irc-work-connect ()
+  "Connect to work IRC server and channels."
+  (interactive)
+  (erc :server "moonshine.local" :port 6667
+       :nick "simon" :full-name "Sympathy for the Devil"))
 
 ;; Yasnippet setup.
 (require 'yasnippet)

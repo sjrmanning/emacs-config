@@ -16,13 +16,13 @@
 (defvar required-packages
   '(graphene
     autopair
-    emacs-eclim
     multiple-cursors
     magit
     markdown-mode
     markdown-mode+
     csharp-mode
-    yasnippet)
+    yasnippet
+    erc-image)
   "A list of packages to ensure are installed at launch.")
 
 ;; Function for determining if packages are installed.
