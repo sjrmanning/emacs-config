@@ -153,6 +153,7 @@
 
 ;; ERC setup.
 (require 'erc-image)
+(setq erc-image-inline-rescale 600)
 (add-to-list 'erc-modules 'image)
 (erc-update-modules)
 (require 'erc-match)
@@ -180,5 +181,11 @@
 (add-to-list 'yas-snippet-dirs custom-snippets-dir t)
 
 (yas--initialize)
+
+;; Disable yasnippet and autopair in term.
+(add-hook 'term-mode-hook
+          (lambda()
+            (yas-minor-mode -1)
+            (autopair-mode 0)))
 
 (provide 'init-modes)
