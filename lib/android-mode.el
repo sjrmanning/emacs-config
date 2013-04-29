@@ -46,7 +46,7 @@
   :prefix "android-mode-"
   :group 'applications)
 
-(defcustom android-mode-sdk-dir "~/Android/sdk"
+(defcustom android-mode-sdk-dir "~/Dev/android-sdk-macosx"
   "Set to the directory containing the Android SDK."
   :type 'string
   :group 'android-mode)
@@ -394,6 +394,11 @@ activity in the 'launcher' category."
   (android-in-root
    (compile (concat "ant -e " task))))
 
+(defun android-build-and-run ()
+  (interactive)
+  (android-in-root
+   (compile (concat "ant -e " "debug install run"))))
+
 (defmacro android-defun-ant-task (task)
   `(defun ,(intern (concat "android-ant-"
                            (replace-regexp-in-string "[[:space:]]" "-" task)))
@@ -414,7 +419,7 @@ activity in the 'launcher' category."
     ("C" . android-ant-clean)
     ("c" . android-ant-debug)
     ("i" . android-ant-installd)
-    ("r" . android-ant-reinstall)
+    ("r" . android-build-and-run)
     ("u" . android-ant-uninstall)
     ("a" . android-start-app)))
 
