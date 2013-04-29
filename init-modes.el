@@ -188,4 +188,13 @@
             (yas-minor-mode -1)
             (autopair-mode 0)))
 
+;; Emacs-Eclim setup.
+(require 'eclim)
+(require 'eclimd)
+(global-eclim-mode)
+
+;; Add Eclim to autocomplete.
+(require 'ac-emacs-eclim-source)
+(ac-emacs-eclim-config)
+
 (provide 'init-modes)

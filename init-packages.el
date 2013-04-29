@@ -14,15 +14,16 @@
 
 ;; Define what packages are required from package.el.
 (defvar required-packages
-  '(graphene
-    autopair
-    multiple-cursors
+  '(autopair
+    csharp-mode
+    emacs-eclim
+    erc-image
+    graphene
     magit
     markdown-mode
     markdown-mode+
-    csharp-mode
-    yasnippet
-    erc-image)
+    multiple-cursors
+    yasnippet)
   "A list of packages to ensure are installed at launch.")
 
 ;; Function for determining if packages are installed.
