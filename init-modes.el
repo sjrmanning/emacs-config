@@ -185,11 +185,16 @@
 
 (yas--initialize)
 
+;; Terminal modes settings.
 ;; Disable yasnippet and autopair in term.
 (add-hook 'term-mode-hook
           (lambda()
             (yas-minor-mode -1)
             (autopair-mode 0)))
+;; Use UTF-8 in term modes.
+(defun term-use-utf8 ()
+  (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))
+(add-hook 'term-exec-hook 'term-use-utf8)
 
 ;; Emacs-Eclim setup.
 (require 'eclim)
@@ -200,5 +205,14 @@
 ;; Add Eclim to autocomplete.
 (require 'ac-emacs-eclim-source)
 (ac-emacs-eclim-config)
+
+;; Compilation mode.
+;; Auto-close successful compilation window.
+(setq compilation-exit-message-function 'compilation-exit-autoclose)
+(defun compilation-exit-autoclose (status code msg)
+  (when (and (eq status 'exit) (zerop code))
+    (bury-buffer)
+    (delete-window (get-buffer-window (get-buffer "*compilation*"))))
+  (cons msg code))
 
 (provide 'init-modes)
