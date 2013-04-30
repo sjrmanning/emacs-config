@@ -151,6 +151,9 @@
 (add-hook 'csharp-mode-hook (lambda ()
                               (autopair-mode 0)))
 
+;; Enable subword mode for programming modes.
+(add-hook 'prog-mode-hook 'subword-mode)
+
 ;; ERC setup.
 (require 'erc-image)
 (setq erc-image-inline-rescale 600)

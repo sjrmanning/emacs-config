@@ -102,4 +102,7 @@
 ;; Global visit ansi-term.
 (global-set-key (kbd "<f2>") 'visit-term-buffer)
 
+;; Switch to previous buffer.
+(global-set-key (kbd "C-c b") 'switch-to-previous-buffer)
+
 (provide 'init-bindings)
