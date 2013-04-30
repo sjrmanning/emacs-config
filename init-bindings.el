@@ -100,6 +100,6 @@
 (global-set-key (kbd "C-c x") 'org-capture)
 
 ;; Global visit ansi-term.
-(global-set-key (kbd "<f2>") 'visit-ansi-term)
+(global-set-key (kbd "<f2>") 'visit-term-buffer)
 
 (provide 'init-bindings)
