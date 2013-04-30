@@ -16,6 +16,9 @@
 ;; Goto-line
 (global-set-key "\M-g" 'goto-line)
 
+;; Full-screen toggle.
+(global-set-key "\C-c\M-f" 'toggle-frame-fullscreen)
+
 ;; Joins following line onto current line.
 (global-set-key (kbd "M-j")
                 (lambda ()
