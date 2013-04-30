@@ -99,4 +99,7 @@
 ;; Org-mode
 (global-set-key (kbd "C-c x") 'org-capture)
 
+;; Global visit ansi-term.
+(global-set-key (kbd "<f2>") 'visit-ansi-term)
+
 (provide 'init-bindings)
