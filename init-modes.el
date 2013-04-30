@@ -192,6 +192,7 @@
 (require 'eclim)
 (require 'eclimd)
 (global-eclim-mode)
+(setq eclimd-default-workspace "~/Documents/EclipseWorkspace")
 
 ;; Add Eclim to autocomplete.
 (require 'ac-emacs-eclim-source)

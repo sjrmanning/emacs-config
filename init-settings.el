@@ -25,6 +25,9 @@
 ;; Enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; Automatically scroll compilation window.
+(setq compilation-scroll-output 1)
+
 ;; Keep backups in a separate directory
 (defun make-backup-file-name (file)
   (concat "~/.emacs.d/cache/backups" (file-name-nondirectory file) "~"))
