@@ -36,3 +36,5 @@
          "* TODO %?\n %i\n")
         ("n" "Note" entry (file+headline (concat org-directory "/Notes.org") "Captured")
          "* %^{Description} %T %^G\n %i%?\n %A")))
+
+(provide 'init-personal)
