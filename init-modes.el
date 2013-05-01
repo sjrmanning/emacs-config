@@ -113,33 +113,13 @@
 (defadvice kill-whole-line (after fix-cookies activate)
   (myorg-update-parent-cookie))
 
-;; Capture settings.
-(setq org-directory "~/Org")
-(setq org-default-notes-file (concat org-directory "/Notes.org"))
-;; Templates.
-(setq org-capture-templates
-      '(("w" "Work Task" entry (file+headline (concat org-directory "/Work.org") "Tasks")
-         "* TODO %?\n %i\n")
-        ("h" "Home Task" entry (file+headline (concat org-directory "/Home.org") "Tasks")
-         "* TODO %?\n %i\n")
-        ("n" "Note" entry (file+headline (concat org-directory "/Notes.org") "Captured")
-         "* %^{Description} %T %^G\n %i%?\n %A")
-        ))
-
-;; Android support.
+;; Android support and setup.
+;; SDK and class paths set in `init-personal.el'.
 (require 'android-mode)
-(setq android-mode-sdk-dir "~/Dev/android-sdk-macosx/")
 (add-hook 'android-mode-hook
           (lambda ()
-            (define-key android-mode-map (kbd "C-x r")
-              (lambda ()
-                (interactive)
-                (android-build-with-eshell)))
-            (setq c-basic-offset 2)))
-(add-hook 'gud-mode-hook
-          (lambda ()
-            (add-to-list 'gud-jdb-classpath
-                         "~/Dev/android-sdk-macosx/platforms/android-16/android.jar")))
+            (setq c-basic-offset 2)
+            (setq tab-width 2)))
 
 ;; Setup markdown-mode autoload.
 (setq auto-mode-alist
@@ -154,21 +134,12 @@
 ;; Enable subword mode for programming modes.
 (add-hook 'prog-mode-hook 'subword-mode)
 
-;; ERC setup.
+;; ERC basic setup.
+;; Further ERC settings are in `init-personal.el'.
 (require 'erc-image)
-(setq erc-image-inline-rescale 600)
+(setq erc-image-inline-rescale 400)
 (add-to-list 'erc-modules 'image)
 (erc-update-modules)
-(require 'erc-match)
-(setq erc-keywords '("simon"))
-(setq erc-autojoin-channels-alist
-      '((".*" "#dev")))
-(setq erc-email-userid "s")
-(defun irc-work-connect ()
-  "Connect to work IRC server and channels."
-  (interactive)
-  (erc :server "moonshine.local" :port 6667
-       :nick "simon" :full-name "Sympathy for the Devil"))
 
 ;; Yasnippet setup.
 (require 'yasnippet)
@@ -200,7 +171,6 @@
 (require 'eclim)
 (require 'eclimd)
 (global-eclim-mode)
-(setq eclimd-default-workspace "~/Documents/EclipseWorkspace")
 
 ;; Add Eclim to autocomplete.
 (require 'ac-emacs-eclim-source)

@@ -6,7 +6,8 @@
 (load-theme 'lt-dark t)
 
 ;; Set custom font.
-;; Fonts larger on Windows (or home pixel density), so size differs between `system-type'.
+;; Fonts larger on Windows (or home pixel density), so size differs
+;; between `system-type'.
 (defvar font-name "Consolas")
 (defvar font-size (if (eq system-type 'windows-nt)
                       10
