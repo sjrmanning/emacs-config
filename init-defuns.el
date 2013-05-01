@@ -77,8 +77,8 @@
 ;; Smart, reusable start-or-switch from emacsredux.
 (defun start-or-switch-to (function buffer-name)
   "Invoke FUNCTION if there is no buffer with BUFFER-NAME.
-   Otherwise switch to the buffer named BUFFER-NAME. Don't clobber
-   the current buffer."
+Otherwise switch to the buffer named BUFFER-NAME. Don't clobber
+the current buffer."
   (if (not (get-buffer buffer-name))
       (progn
         (split-window-sensibly (selected-window))
@@ -98,7 +98,7 @@
   "Switch to default `ielm' buffer.
    Start `ielm' if it's not already running."
   (interactive)
-  (prelude-start-or-switch-to 'ielm "*ielm*"))
+  (start-or-switch-to 'ielm "*ielm*"))
 
 ;; Switch to previous buffer.
 (defun switch-to-previous-buffer ()
