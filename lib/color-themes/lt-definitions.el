@@ -58,7 +58,7 @@ the \"Gen RGB\" column in lt-definitions.el to improve them further."
   '((base03  "#002b36" "#202020" "#1c1c1c" "brightblack"   "black")
     (base02  "#073642" "#262626" "#262626" "black"         "black")
     (base01  "#586e75" "#555555" "#585858" "brightgreen"   "green")
-    (base00  "#657b83" "#aaaaaa" "#626262" "brightyellow"  "yellow")
+    (base00  "#657b83" "#999999" "#626262" "brightyellow"  "yellow")
     (base0   "#839496" "#cccccc" "#808080" "brightblue"    "blue")
     (base1   "#93a1a1" "#cccccc" "#8a8a8a" "brightcyan"    "cyan")
     (base2   "#eee8d5" "#e9e2cb" "#e4e4e4" "white"         "white")
