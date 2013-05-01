@@ -25,4 +25,8 @@
 (when (eq system-type 'windows-nt)
   (menu-bar-mode -1))
 
+;; If OS X full-screen is available, do it.
+(when (fboundp 'toggle-frame-fullscreen)
+  (toggle-frame-fullscreen))
+
 (provide 'init-display)
