@@ -2,8 +2,8 @@
 ;; File: init-display.el
 ;; Look and feel related customisations.
 
-;; Solarized colour-theme
-(load-theme 'solarized-dark t)
+;; Light Table inspired colour-theme.
+(load-theme 'lt-dark t)
 
 ;; Set custom font.
 ;; Fonts larger on Windows (or home pixel density), so size differs between `system-type'.
