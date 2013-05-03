@@ -3,7 +3,7 @@
 ;; Look and feel related customisations.
 
 ;; Light Table inspired colour-theme.
-(load-theme 'lt-dark t)
+(load-theme 'noctilux t)
 
 ;; Set custom font.
 ;; Fonts larger on Windows (or home pixel density), so size differs

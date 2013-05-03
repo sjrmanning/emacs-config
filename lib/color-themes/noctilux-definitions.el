@@ -55,7 +55,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
 ;;        that Emacs seems to dislike
 (defvar noctilux-colors           ; ANSI(Noctilux terminal)
   ;; name     sRGB      Gen RGB   256       16              8
-  '((base03  "#202020" "#202020" "#202020" "brightblack"   "black")
+  '((base03  "#1A1A1A" "#1A1A1A" "#1A1A1A" "brightblack"   "black")
     (base02  "#262626" "#262626" "#262626" "black"         "black")
     (base01  "#555555" "#555555" "#555555" "brightgreen"   "green")
     (base00  "#999999" "#999999" "#999999" "brightyellow"  "yellow")
