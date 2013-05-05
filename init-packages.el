@@ -14,15 +14,20 @@
 
 ;; Define what packages are required from package.el.
 (defvar required-packages
-  '(autopair
+  '(ace-jump-mode
+    android-mode
+    autopair
+    auto-complete-clang-async
     csharp-mode
+    dummy-h-mode
+    edit-server
     emacs-eclim
     erc-image
     graphene
     magit
     markdown-mode
-    markdown-mode+
     multiple-cursors
+    pos-tip
     switch-window
     yasnippet)
   "A list of packages to ensure are installed at launch.")
