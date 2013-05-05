@@ -24,6 +24,7 @@
     emacs-eclim
     erc-image
     graphene
+    iedit
     magit
     markdown-mode
     multiple-cursors
