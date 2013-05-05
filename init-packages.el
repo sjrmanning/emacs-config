@@ -23,6 +23,7 @@
     markdown-mode
     markdown-mode+
     multiple-cursors
+    switch-window
     yasnippet)
   "A list of packages to ensure are installed at launch.")
 

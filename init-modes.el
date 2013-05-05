@@ -185,4 +185,7 @@
     (delete-window (get-buffer-window (get-buffer "*compilation*"))))
   (cons msg code))
 
+;; Numerical window-switching with C-x o.
+(require 'switch-window)
+
 (provide 'init-modes)
