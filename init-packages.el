@@ -24,6 +24,7 @@
     emacs-eclim
     erc-image
     find-file-in-repository
+    flycheck
     graphene
     iedit
     magit
