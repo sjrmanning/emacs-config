@@ -109,7 +109,18 @@
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
 
 ;; Android key-bindings.
-;; Build and run requires custom_rules.xml for run rule.
-(define-key android-mode-map (kbd "C-c C-c r") 'android-build-and-run)
+;; android-build-and-run requires custom_rules.xml for run rule.
+;; Re-defined using android-mode standard.
+(defconst android-mode-keys
+  '(("d" . android-start-ddms)
+    ("e" . android-start-emulator)
+    ("l" . android-logcat)
+    ("C" . android-ant-clean)
+    ("t" . android-ant-test)
+    ("c" . android-ant-debug)
+    ("i" . android-ant-installd)
+    ("r" . android-build-and-run)
+    ("u" . android-ant-uninstall)
+    ("a" . android-start-app)))
 
 (provide 'init-bindings)
