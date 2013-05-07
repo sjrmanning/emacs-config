@@ -27,6 +27,7 @@
     iedit
     magit
     markdown-mode
+    monky
     multiple-cursors
     pos-tip
     switch-window
