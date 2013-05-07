@@ -108,4 +108,8 @@
 ;; Find file in repository.
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
 
+;; Android key-bindings.
+;; Build and run requires custom_rules.xml for run rule.
+(define-key android-mode-map (kbd "C-c C-c r") 'android-build-and-run)
+
 (provide 'init-bindings)

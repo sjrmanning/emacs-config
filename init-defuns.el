@@ -107,4 +107,10 @@ the current buffer."
   (interactive)
   (switch-to-buffer (other-buffer (current-buffer) 1)))
 
+;; Android 'build and run' command.
+;; Requires custom_rules.xml with rules for run.
+(defun android-build-and-run ()
+  (interactive)
+  (android-ant "debug install run"))
+
 (provide 'init-defuns)
