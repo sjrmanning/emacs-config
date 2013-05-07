@@ -105,4 +105,7 @@
 ;; Switch to previous buffer.
 (global-set-key (kbd "C-c b") 'switch-to-previous-buffer)
 
+;; Find file in repository.
+(global-set-key (kbd "C-x f") 'find-file-in-repository)
+
 (provide 'init-bindings)

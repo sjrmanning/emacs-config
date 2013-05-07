@@ -23,6 +23,7 @@
     edit-server
     emacs-eclim
     erc-image
+    find-file-in-repository
     graphene
     iedit
     magit
