@@ -25,6 +25,7 @@
     erc-image
     find-file-in-repository
     flycheck
+    flymake-python-pyflakes
     graphene
     iedit
     jedi

@@ -190,27 +190,18 @@
 ;; Numerical window-switching with C-x o.
 (require 'switch-window)
 
+;; Flymake setup.
+;; Displays flymake errors on cursor in a popup.el tip.
+(require 'flymake-popup)
+
 ;; Python config.
 ;; Jedi setup.
 (setq jedi:setup-keys t)
 (setq jedi:complete-on-dot t)
+;; Python hook (sets up pyflakes, jedi, etc.)
 (add-hook 'python-mode-hook
           (lambda ()
-            'jedi:setup
-            (unless (eq buffer-file-name nil) (flymake-mode t))))
-;; Flymake with pyflakes.
-;; Need tramp to check that it's not a remote buffer.
-(require 'tramp)
-(when (load "flymake" t)
-  (defun flymake-pyflakes-init ()
-    (when (not (tramp-tramp-file-p (buffer-file-name (current-buffer))))
-      (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                         'flymake-create-temp-inplace))
-             (local-file (file-relative-name
-                          temp-file
-                          (file-name-directory buffer-file-name))))
-        (list "pyflakes" (list local-file)))))
-  (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.py\\'" flymake-pyflakes-init)))
+            (flymake-python-pyflakes-load)
+            (jedi:setup)))
 
 (provide 'init-modes)
