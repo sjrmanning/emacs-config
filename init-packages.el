@@ -30,7 +30,6 @@
     magit
     markdown-mode
     monky
-    multi-term
     multiple-cursors
     pos-tip
     switch-window
