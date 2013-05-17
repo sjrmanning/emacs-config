@@ -27,6 +27,7 @@
     flycheck
     graphene
     iedit
+    jedi
     magit
     markdown-mode
     monky

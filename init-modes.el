@@ -190,4 +190,9 @@
 ;; Numerical window-switching with C-x o.
 (require 'switch-window)
 
+;; Python config.
+(setq jedi:setup-keys t)
+(setq jedi:complete-on-dot t)
+(add-hook 'python-mode-hook 'jedi:setup)
+
 (provide 'init-modes)
