@@ -538,6 +538,9 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (eclim-problems-highlight-error-face ((t (,@fg-orange ,@bg-darkred))))
              (ac-emacs-eclim-selection-face ((t (,@fg-aquahl ,@bg-aqua))))
              (ac-emacs-eclim-candidate-face ((t (,@fg-base01 ,@bg-base02))))
+             ;; auto-complete popup
+             (ac-candidate-face ((t (,@fg-base01 ,@bg-base02))))
+             (ac-selection-face ((t (,@fg-aquahl ,@bg-aqua))))
 	     ;;ansi-term
 	     (term-color-black ((t ( ,@fg-base02))))
 	     (term-color-red ((t ( ,@fg-red))))
