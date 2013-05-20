@@ -37,4 +37,7 @@
         ("n" "Note" entry (file+headline (concat org-directory "/Notes.org") "Captured")
          "* %^{Description} %T %^G\n %i%?\n %A")))
 
+;; Use zsh as default term shell.
+(setq explicit-shell-file-name "zsh")
+
 (provide 'init-personal)

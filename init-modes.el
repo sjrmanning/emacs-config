@@ -157,8 +157,6 @@
 (yas--initialize)
 
 ;; Terminal modes settings.
-;; Use zsh as default shell.
-(setq explicit-shell-file-name "/bin/zsh")
 ;; Disable yasnippet and autopair in term.
 (add-hook 'term-mode-hook
           (lambda ()
