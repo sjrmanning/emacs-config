@@ -93,8 +93,9 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-;; Magit bindings
+;; Magit and monky bindings
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-c g") 'monky-status)
 
 ;; Org-mode
 (global-set-key (kbd "C-c x") 'org-capture)
