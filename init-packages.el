@@ -23,6 +23,7 @@
     edit-server
     emacs-eclim
     erc-image
+    fill-column-indicator
     find-file-in-repository
     flycheck
     flymake-python-pyflakes

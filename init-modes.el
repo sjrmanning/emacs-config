@@ -188,6 +188,10 @@
 ;; Numerical window-switching with C-x o.
 (require 'switch-window)
 
+;; Column indicator mode settings.
+(setq fci-rule-color "#292929")
+(setq fci-rule-width 1)
+
 ;; Flymake setup.
 ;; Displays flymake errors on cursor in a popup.el tip.
 (require 'flymake-popup)
@@ -199,7 +203,12 @@
 ;; Python hook (sets up pyflakes, jedi, etc.)
 (add-hook 'python-mode-hook
           (lambda ()
+            (set-fill-column 80)
+            (fci-mode 1)
             (flymake-python-pyflakes-load)
             (jedi:setup)))
+
+;; Enable hl-line mode in programming modes.
+(add-hook 'prog-mode-hook 'hl-line-mode)
 
 (provide 'init-modes)
