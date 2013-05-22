@@ -541,6 +541,9 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              ;; auto-complete popup
              (ac-candidate-face ((t (,@fg-base01 ,@bg-base02))))
              (ac-selection-face ((t (,@fg-aquahl ,@bg-aqua))))
+             ;; monky diff
+             (monky-diff-add ((t (,@fmt-bold ,@fg-green))))
+             (monky-diff-del ((t (,@fmt-bold ,@fg-red))))
 	     ;;ansi-term
 	     (term-color-black ((t ( ,@fg-base02))))
 	     (term-color-red ((t ( ,@fg-red))))
