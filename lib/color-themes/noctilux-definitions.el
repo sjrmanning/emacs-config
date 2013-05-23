@@ -175,6 +175,8 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
               (fg-aqua `(:foreground ,aqua))
               (fg-aquahl `(:foreground ,aquahl))
 
+              (fc-error `(:foreground ,orange :background ,darkred))
+
               (fmt-none `(:weight normal :slant normal  :underline nil        :inverse-video nil))
               (fmt-bold `(:weight ,bold  :slant normal  :underline nil        :inverse-video nil))
               (fmt-bldi `(:weight ,bold                 :underline nil        :inverse-video nil))
@@ -202,7 +204,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (highlight ((t (,@bg-base02))))
              (hl-line ((t (:underline ,opt-under ,@bg-base02)))) ; CursorLine
              (isearch ((t (,@fmt-stnd ,@fg-orange ,@bg-back)))) ; IncSearch
-             (isearch-fail ((t (,@fmt-stnd ,@fg-orange ,@bg-back)))) ; IncSearch
+             (isearch-fail ((t (,@fc-error)))) ; IncSearch
              (lazy-highlight ((t (,@fmt-revr ,@fg-yellow ,@bg-back)))) ; Search
              (link ((t (,@fmt-undr ,@fg-violet))))
              (link-visited ((t (,@fmt-undr ,@fg-magenta))))
@@ -215,11 +217,13 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (region ((t (,@fg-base01 ,@bg-base03 ,@fmt-revbb)))) ; Visual
              (secondary-selection ((t (,@bg-base02))))
              (shadow ((t (,@fg-base01))))
-             (trailing-whitespace ((t (,@fg-orange ,@bg-darkred))))
+             (trailing-whitespace ((t (,@fc-error))))
              (vertical-border ((t (,@fg-base0))))
              ;; comint
              (comint-highlight-prompt ((t (,@fg-blue))))
              ;; compilation
+             (compilation-error ((t (,@fc-error))))
+             (compilation-mode-line-fail ((t (,@fc-error))))
              (compilation-info ((t (,@fmt-bold ,@fg-green))))
              (compilation-warning ((t (,@fmt-bold ,@fg-orange))))
              ;; custom
@@ -238,7 +242,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (custom-documentation ((t (:inherit default))))
              (custom-group-tag ((t (,@fg-base1))))
              (custom-group-tag-1 ((t (,fmt-bold ,@fg-base1))))
-             (custom-invalid ((t (,@fg-orange ,@bg-darkred))))
+             (custom-invalid ((t (,@fc-error))))
              (custom-link ((t (,@fg-violet))))
              (custom-state ((t (,@fg-green))))
              (custom-variable-tag ((t (,@fg-base1))))
@@ -247,7 +251,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
                  (high
                   `((diff-added ((t (,@fmt-revr ,@fg-green))))
                     (diff-changed ((t (,@fmt-revr ,@fg-yellow))))
-                    (diff-removed ((t (,@fg-orange ,@bg-darkred))))
+                    (diff-removed ((t (,@fc-error))))
                     (diff-refine-change
                      ((t (,@fmt-revr ,@fg-blue ,@bg-back))))))
                  (low
@@ -357,7 +361,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (speedbar-tag-face ((t (,@fmt-none ,@fg-blue))))
              ;; show-paren - MatchParen
              (show-paren-match ((t (,@fmt-bold ,@fg-cyan ,@bg-base02))))
-             (show-paren-mismatch ((t (,@fmt-bold ,@fg-orange ,@bg-darkred))))
+             (show-paren-mismatch ((t (,@fmt-bold ,@fc-error))))
              ;; widgets
              (widget-field
               ((t (,@fg-base1 ,@bg-base02 :box (:line-width 1)
@@ -369,7 +373,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
 	     (bm-fringe-face ((t (,@bg-orange ,@fg-base03))))
 	     (bm-fringe-persistent-face ((t (,@bg-blue ,@fg-base03))))
              ;; Flymake
-             (flymake-errline ((t (,@fg-orange ,@bg-darkred)))) ; ErrorMsg
+             (flymake-errline ((t (,@fc-error)))) ; ErrorMsg
              (flymake-warnline ; WarningMsg
               ((t (,@fmt-bold ,@fg-red ,@bg-back))))
              ;; column-marker
@@ -496,7 +500,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (rainbow-delimiters-depth-8-face ((t (,@fg-magenta))))
              (rainbow-delimiters-depth-9-face ((t (,@fg-base0))))
              ;; slime
-             (slime-error-face ((t (,@fg-orange ,@bg-darkred)))) ; ErrorMsg
+             (slime-error-face ((t (,@fc-error)))) ; ErrorMsg
              (slime-note-face ((t (,@fg-yellow))))
              (slime-repl-inputted-output-face ((t (,@fg-red))))
              (slime-repl-output-mouseover-face ((t (:box (:color ,base3)))))
@@ -535,7 +539,7 @@ the \"Gen RGB\" column in noctilux-definitions.el to improve them further."
              (flyspell-incorrect ((t (,@fg-red))))
              (flyspell-duplicate ((t (,@fg-yellow))))
              ;; eclim & eclim ac source
-             (eclim-problems-highlight-error-face ((t (,@fg-orange ,@bg-darkred))))
+             (eclim-problems-highlight-error-face ((t (,@fc-error))))
              (ac-emacs-eclim-selection-face ((t (,@fg-aquahl ,@bg-aqua))))
              (ac-emacs-eclim-candidate-face ((t (,@fg-base01 ,@bg-base02))))
              ;; auto-complete popup
