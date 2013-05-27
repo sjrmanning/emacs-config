@@ -51,4 +51,8 @@
 ;; Change bookmarks file location.
 (setq bookmark-file "~/.emacs.d/etc/bookmarks")
 
+;; GC optimisation.
+;; Increases garbage collection threshold to 20mb (from 0.76mb)
+(setq gc-cons-threshold 20000000)
+
 (provide 'init-settings)

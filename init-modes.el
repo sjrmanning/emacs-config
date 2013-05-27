@@ -203,6 +203,11 @@
 ;; Python hook (sets up pyflakes, jedi, etc.)
 (add-hook 'python-mode-hook
           (lambda ()
+            (add-hook 'local-write-file-hooks
+              '(lambda()
+                 (save-excursion
+                   (delete-trailing-whitespace))))
+            (electric-indent-mode -1)
             (set-fill-column 80)
             (fci-mode 1)
             (flymake-python-pyflakes-load)
