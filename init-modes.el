@@ -208,7 +208,7 @@
                  (save-excursion
                    (delete-trailing-whitespace))))
             (electric-indent-mode -1)
-            (set-fill-column 80)
+            (set-fill-column 79)
             (fci-mode 1)
             (flymake-python-pyflakes-load)
             (jedi:setup)))

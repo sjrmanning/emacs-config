@@ -16,6 +16,10 @@
 ;; Goto-line
 (global-set-key "\M-g" 'goto-line)
 
+;; Smart beginning of line.
+(global-set-key [remap move-beginning-of-line]
+                'smarter-move-beginning-of-line)
+
 ;; Full-screen toggle.
 (global-set-key "\C-c\M-f" 'toggle-frame-fullscreen)
 
