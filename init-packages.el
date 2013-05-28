@@ -27,6 +27,7 @@
     find-file-in-repository
     flycheck
     flymake-python-pyflakes
+    gist
     graphene
     iedit
     jedi

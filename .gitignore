@@ -21,6 +21,9 @@ elpa/
 cache/
 bookmarks
 
+# Private stuff
+var/
+
 # Emacs server dir
 server/
 
