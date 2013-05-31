@@ -128,11 +128,12 @@
 ;; C#
 ;; Add csharp-mode to graphene's prog-modes.
 (push 'csharp-mode-hook graphene-prog-mode-hooks)
-(add-hook 'csharp-mode-hook (lambda ()
-                              (autopair-mode 0)))
-
-;; Enable subword mode for programming modes.
-(add-hook 'prog-mode-hook 'subword-mode)
+;; csharp-mode isn't a normal prog-mode, so it needs to call the
+;; shared-prog-mode-settings function manually.
+(add-hook 'csharp-mode-hook
+          (lambda ()
+            (shared-prog-mode-settings)
+            (autopair-mode 0)))
 
 ;; ERC basic setup.
 ;; Further ERC settings are in `init-personal.el'.
@@ -203,17 +204,21 @@
 ;; Python hook (sets up pyflakes, jedi, etc.)
 (add-hook 'python-mode-hook
           (lambda ()
-            (add-hook 'local-write-file-hooks
-              '(lambda()
-                 (save-excursion
-                   (delete-trailing-whitespace))))
             (electric-indent-mode -1)
             (set-fill-column 79)
             (fci-mode 1)
             (flymake-python-pyflakes-load)
             (jedi:setup)))
 
-;; Enable hl-line mode in programming modes.
-(add-hook 'prog-mode-hook 'hl-line-mode)
+;; Common programming-mode settings.
+(defun shared-prog-mode-settings ()
+  (subword-mode 1)
+  (hl-line-mode 1)
+  ;; Delete trailing whitespace on save with hook.
+  (add-hook 'local-write-file-hooks
+              '(lambda()
+                 (save-excursion
+                   (delete-trailing-whitespace)))))
+(add-hook 'prog-mode-hook 'shared-prog-mode-settings)
 
 (provide 'init-modes)
