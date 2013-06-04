@@ -27,6 +27,7 @@
     find-file-in-repository
     flycheck
     flymake-python-pyflakes
+    flx
     gist
     graphene
     iedit
@@ -50,12 +51,12 @@
 (unless (required-packages-installed-p)
   ;; Prevent auto-save-list while installing.
   (setq auto-save-list-file-name nil)
-  
+
   ;; Check for new packages (package versions)
   (message "%s" "Updating package database...")
   (package-refresh-contents)
   (message "%s" " done.")
-  
+
   ;; Install the missing packages
   (dolist (p required-packages)
     (when (not (package-installed-p p))
