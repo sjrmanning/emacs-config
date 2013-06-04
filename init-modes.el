@@ -221,4 +221,21 @@
                    (delete-trailing-whitespace)))))
 (add-hook 'prog-mode-hook 'shared-prog-mode-settings)
 
+;; Set up flx.
+(require 'flx-ido)
+(flx-ido-mode 1)
+;; Disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+
+;; Clojure development.
+;; Auto-complete with nrepl.
+(require 'ac-nrepl)
+ (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
+ (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+ (eval-after-load "auto-complete"
+   '(add-to-list 'ac-modes 'nrepl-mode))
+;; nrepl configuration.
+(add-hook 'nrepl-interaction-mode-hook
+  'nrepl-turn-on-eldoc-mode)
+
 (provide 'init-modes)

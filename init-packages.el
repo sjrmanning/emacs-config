@@ -14,10 +14,12 @@
 
 ;; Define what packages are required from package.el.
 (defvar required-packages
-  '(ace-jump-mode
+  '(ac-nrepl
+    ace-jump-mode
     android-mode
     autopair
     auto-complete-clang-async
+    clojure-mode
     csharp-mode
     dummy-h-mode
     edit-server
@@ -36,6 +38,7 @@
     markdown-mode
     monky
     multiple-cursors
+    nrepl
     pos-tip
     switch-window
     yasnippet)
