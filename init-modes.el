@@ -204,6 +204,11 @@
 ;; Python hook (sets up pyflakes, jedi, etc.)
 (add-hook 'python-mode-hook
           (lambda ()
+            ;; Delete trailing whitespace on save with hook.
+            (add-hook 'local-write-file-hooks
+                      '(lambda()
+                         (save-excursion
+                           (delete-trailing-whitespace))))
             (electric-indent-mode -1)
             (set-fill-column 79)
             (fci-mode 1)
@@ -213,12 +218,7 @@
 ;; Common programming-mode settings.
 (defun shared-prog-mode-settings ()
   (subword-mode 1)
-  (hl-line-mode 1)
-  ;; Delete trailing whitespace on save with hook.
-  (add-hook 'local-write-file-hooks
-              '(lambda()
-                 (save-excursion
-                   (delete-trailing-whitespace)))))
+  (hl-line-mode 1))
 (add-hook 'prog-mode-hook 'shared-prog-mode-settings)
 
 ;; Set up flx.
