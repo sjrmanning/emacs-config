@@ -37,3 +37,6 @@ semanticdb/
 # Org-mode
 .org-id-locations
 *_archive
+
+# Emacs-W3
+url/
