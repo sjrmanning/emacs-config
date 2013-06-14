@@ -109,6 +109,9 @@
 ;; Switch to previous buffer.
 (global-set-key (kbd "C-c b") 'switch-to-previous-buffer)
 
+;; Delete whitespace around point.
+(global-set-key (kbd "C-c j") 'just-one-space)
+
 ;; Find file in repository.
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
 
