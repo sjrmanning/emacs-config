@@ -11,6 +11,9 @@
 ;; Disable speedbar until it's fixed.
 (speedbar -1)
 
+;; Fix issue with minibuffer resizing caused by graphene setting.
+(setq resize-mini-windows t)
+
 ;; Edit-server.
 ;; Provides editing from Chrome.
 (require 'edit-server)
