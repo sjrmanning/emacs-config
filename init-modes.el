@@ -12,7 +12,7 @@
 (speedbar -1)
 
 ;; Fix issue with minibuffer resizing caused by graphene setting.
-(setq resize-mini-windows t)
+(setq resize-mini-windows 'grow-only)
 
 ;; Edit-server.
 ;; Provides editing from Chrome.
