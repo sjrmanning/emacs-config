@@ -12,9 +12,6 @@
 (setq c-default-style "bsd"
       c-basic-offset 4)
 
-;; Disable smartparens because it breaks indentation.
-(setq graphene-autopair-auto nil)
-
 ;; Enable emacs24 electric indentation.
 (electric-indent-mode 1)
 

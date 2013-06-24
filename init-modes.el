@@ -29,10 +29,6 @@
 ;; Asynchronous clang auto-completion.
 (require 'auto-complete-clang-async)
 
-;; Autopair (replacing smartparens).
-(require 'autopair)
-(autopair-global-mode)
-
 ;; Auto-complete configuration.
 ;; Clang-completion specific.
 (defun ac-clang-mode-setup ()
