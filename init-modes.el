@@ -3,10 +3,11 @@
 ;; Initialisation and customisation of modes.
 ;; Note that some are handled by Graphene, but may be customised here.
 
-;; Dummy header mode.
-;; Switches mode to c++, c, objc depending on .h contents.
+;; Custom auto-mode additions.
+(add-to-list 'auto-mode-alist '("\\.md" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.mako\\'" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.h$" . dummy-h-mode))
-(autoload 'dummy-h-mode "dummy-h-mode" "Dummy header mode" t)
+(autoload 'dummy-h-mode "dummy-h-mode" "Dummy header mode." t)
 
 ;; Disable speedbar until it's fixed.
 (speedbar -1)
@@ -119,10 +120,6 @@
           (lambda ()
             (setq c-basic-offset 2)
             (setq tab-width 2)))
-
-;; Setup markdown-mode autoload.
-(setq auto-mode-alist
-      (cons '("\\.md" . markdown-mode) auto-mode-alist))
 
 ;; C#
 ;; Add csharp-mode to graphene's prog-modes.
