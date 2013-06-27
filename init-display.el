@@ -17,7 +17,7 @@
 ;; Set custom font.
 ;; Fonts larger on Windows (or home pixel density), so size differs
 ;; between `system-type'.
-(defvar font-name "Inconsolata LGC")
+(defvar font-name "Source Code Pro")
 (defvar font-size (if (eq system-type 'windows-nt)
                       10
                       14))
