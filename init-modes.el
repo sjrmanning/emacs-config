@@ -12,8 +12,14 @@
 ;; Disable speedbar until it's fixed.
 (speedbar -1)
 
-;; Fix issue with minibuffer resizing caused by graphene setting.
-(setq resize-mini-windows 'grow-only)
+;; Compilation-mode settings.
+(defun my-compilation-hook () 
+  "Ensure compile window is splitting vertically."
+  (progn
+    (if (not (get-buffer-window "*compilation*"))
+        (progn
+          (split-window-vertically)))))
+(add-hook 'compilation-mode-hook 'my-compilation-hook)
 
 ;; Edit-server.
 ;; Provides editing from Chrome.

@@ -15,6 +15,9 @@
 ;; Enable emacs24 electric indentation.
 (electric-indent-mode 1)
 
+;; Fix issue with minibuffer resizing caused by graphene setting.
+(setq resize-mini-windows 'grow-only)
+
 ;; Tabs => Spaces (4)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
