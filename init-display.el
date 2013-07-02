@@ -3,21 +3,21 @@
 ;; Look and feel related customisations.
 
 ;; Light Table inspired colour-theme.
-(load-theme 'noctilux t)
+(load-theme 'monokai t)
 
 ;; Manually set ac-selection-face (graphene-theme locks this).
 ;; Bit hacky, will need to look into this.
-(defadvice load-theme
-  (after load-graphene-theme (theme &optional no-confirm no-enable) activate)
-  (set-face-attribute 'ac-selection-face nil
-                      :foreground "#13879C"
-                      :background "#96FAFF"))
+;;(defadvice load-theme
+;;  (after load-graphene-theme (theme &optional no-confirm no-enable) activate)
+;;  (set-face-attribute 'ac-selection-face nil
+;;                      :foreground "#13879C"
+;;                      :background "#96FAFF"))
 
 
 ;; Set custom font.
 ;; Fonts larger on Windows (or home pixel density), so size differs
 ;; between `system-type'.
-(defvar font-name "Inconsolata LGC")
+(defvar font-name "Source Code Pro")
 (defvar font-size (if (eq system-type 'windows-nt)
                       10
                       14))
