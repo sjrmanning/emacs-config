@@ -162,7 +162,7 @@ foreground ,monokai-fg-1
    `(font-lock-doc-face ((t (:foreground ,monokai-fg-1))))
    `(font-lock-doc-string-face ((t (:foreground ,monokai-fg-1))))
    `(font-lock-function-name-face ((t (:foreground ,monokai-green))))
-   `(font-lock-keyword-face ((t (:foreground ,monokai-red :weight bold))))
+   `(font-lock-keyword-face ((t (:foreground ,monokai-red :bold t))))
    `(font-lock-negation-char-face ((t (:foreground ,monokai-fg-1))))
    `(font-lock-preprocessor-face ((t (:foreground ,monokai-red))))
    `(font-lock-string-face ((t (:foreground ,monokai-yellow))))
@@ -270,6 +270,17 @@ foreground ,monokai-fg-1
    `(diredp-read-priv ((t (:foreground ,monokai-green-1))))
    `(diredp-symlink ((t (:foreground ,monokai-yellow))))
    `(diredp-write-priv ((t (:foreground ,monokai-magenta))))
+;;;;; eclim
+   `(eclim-problems-highlight-error-face
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,monokai-red)
+                   :inherit unspecified :foreground unspecified :background unspecified))
+      (t (:foreground ,monokai-red-1 :weight bold :underline t))))
+   `(eclim-problems-highlight-warning-face
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,monokai-orange)
+                   :inherit unspecified :foreground unspecified :background unspecified))
+      (t (:foreground ,monokai-orange-1 :weight bold :underline t))))
 ;;;;; ert
    `(ert-test-result-expected ((t (:foreground ,monokai-green :background ,monokai-bg))))
    `(ert-test-result-unexpected ((t (:foreground ,monokai-red :background ,monokai-bg))))
@@ -480,6 +491,12 @@ foreground ,monokai-fg-1
    `(magit-section-title ((t (:foreground ,monokai-yellow :weight bold))))
    `(magit-branch ((t (:foreground ,monokai-blue :weight bold))))
    `(magit-item-highlight ((t (:background ,monokai-bg+2))))
+;;;;; monky
+   `(monky-diff-add ((,class (:foreground ,monokai-green :background nil))
+                 (t (:foreground ,monokai-green-1 :background nil))))
+   `(monky-diff-del ((,class (:foreground ,monokai-red :background nil))
+                   (t (:foreground ,monokai-red-1 :background nil))))
+   `(monky-section-title ((t (:foreground ,monokai-yellow :weight bold))))
 ;;;;; message-mode
    `(message-cited-text ((t (:inherit font-lock-comment))))
    `(message-header-name ((t (:foreground ,monokai-green+1))))

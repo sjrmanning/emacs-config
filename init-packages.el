@@ -19,6 +19,7 @@
     android-mode
     autopair
     auto-complete-clang-async
+    bookmark+
     clojure-mode
     csharp-mode
     dummy-h-mode

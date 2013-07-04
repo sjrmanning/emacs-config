@@ -237,7 +237,9 @@
  (eval-after-load "auto-complete"
    '(add-to-list 'ac-modes 'nrepl-mode))
 ;; nrepl configuration.
-(add-hook 'nrepl-interaction-mode-hook
-  'nrepl-turn-on-eldoc-mode)
+(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
+
+;; Bookmarks+
+(setq bmkp-last-as-first-bookmark-file "~/.emacs.d/etc/bookmarks")
 
 (provide 'init-modes)
