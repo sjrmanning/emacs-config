@@ -16,9 +16,10 @@
 (defvar required-packages
   '(ac-nrepl
     ace-jump-mode
+    ag
     android-mode
-    autopair
     auto-complete-clang-async
+    autopair
     bookmark+
     clojure-mode
     csharp-mode
@@ -28,9 +29,9 @@
     erc-image
     fill-column-indicator
     find-file-in-repository
+    flx
     flycheck
     flymake-python-pyflakes
-    flx
     gist
     graphene
     iedit
