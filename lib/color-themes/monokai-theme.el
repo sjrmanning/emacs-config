@@ -471,7 +471,7 @@ foreground ,monokai-fg-1
    `(jabber-title-medium ((t (:height 1.2 :weight bold))))
    `(jabber-title-large ((t (:height 1.3 :weight bold))))
 ;;;;; linum-mode
-   `(linum ((t (:foreground ,monokai-purple :background ,monokai-bg))))
+   `(linum ((t (:foreground ,monokai-purple :background ,monokai-bg :weight normal))))
 ;;;;; macrostep
    `(macrostep-gensym-1
      ((t (:foreground ,monokai-green+2 :background ,monokai-bg-1))))
