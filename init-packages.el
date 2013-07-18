@@ -30,6 +30,7 @@
     fill-column-indicator
     find-file-in-repository
     flx
+    flx-ido
     flycheck
     flymake-python-pyflakes
     gist
