@@ -135,7 +135,7 @@
 (add-hook 'csharp-mode-hook
           (lambda ()
             (shared-prog-mode-settings)
-            (autopair-mode 0)))
+            (smartparens-mode 0)))
 
 ;; ERC basic setup.
 ;; Further ERC settings are in `init-personal.el'.
