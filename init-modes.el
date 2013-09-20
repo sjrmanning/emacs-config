@@ -94,8 +94,8 @@
 (require 'iedit)
 
 ;; Change multiple-cursor settings location.
-(require 'multiple-cursors)
 (setq mc/list-file "~/.emacs.d/etc/.mc-lists.el")
+(require 'multiple-cursors)
 
 ;; Org-mode setup.
 ;; Keywords.
