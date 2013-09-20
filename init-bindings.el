@@ -22,6 +22,9 @@
 ;; Full-screen toggle.
 (global-set-key "\C-c\M-f" 'toggle-frame-fullscreen)
 
+;; Switch-window with switch-window.el
+(global-set-key (kbd "C-x o") 'switch-window)
+
 ;; Joins following line onto current line.
 (global-set-key (kbd "M-j")
                 (lambda ()
