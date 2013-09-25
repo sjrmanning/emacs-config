@@ -51,6 +51,9 @@
 ;; Change bookmarks file location.
 (setq bookmark-file "~/.emacs.d/etc/bookmarks")
 
+;; Change save-places file location.
+(setq save-place-file "~/.emacs.d/cache/places")
+
 ;; GC optimisation.
 ;; Increases garbage collection threshold to 20mb (from 0.76mb)
 (setq gc-cons-threshold 20000000)
