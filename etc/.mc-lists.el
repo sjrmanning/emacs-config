@@ -86,12 +86,15 @@
         paredit-wrap-round
         paredit-wrap-round-from-behind
         paredit-wrap-square
+        python-indent-dedent-line-backspace
         quoted-insert
         save-region-or-current-line
         sgml-delete-tag
         sgml-slash
         skeleton-pair-insert-maybe
         slime-space
+        smarter-move-beginning-of-line
+        sp--self-insert-command
         sp-self-insert-command
         tagedit-insert-equal
         tagedit-kill-attribute
