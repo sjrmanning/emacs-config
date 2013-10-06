@@ -2,17 +2,8 @@
 ;; File: init-display.el
 ;; Look and feel related customisations.
 
-;; Light Table inspired colour-theme.
+;; Monokai colour-theme.
 (load-theme 'monokai t)
-
-;; Manually set ac-selection-face (graphene-theme locks this).
-;; Bit hacky, will need to look into this.
-;;(defadvice load-theme
-;;  (after load-graphene-theme (theme &optional no-confirm no-enable) activate)
-;;  (set-face-attribute 'ac-selection-face nil
-;;                      :foreground "#13879C"
-;;                      :background "#96FAFF"))
-
 
 ;; Set custom font.
 ;; Fonts larger on Windows (or home pixel density), so size differs
