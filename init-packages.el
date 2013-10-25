@@ -21,6 +21,7 @@
     auto-complete-clang-async
     autopair
     bookmark+
+    cider
     clojure-mode
     csharp-mode
     dummy-h-mode
@@ -41,7 +42,6 @@
     markdown-mode
     monky
     multiple-cursors
-    nrepl
     pos-tip
     switch-window
     yasnippet)
