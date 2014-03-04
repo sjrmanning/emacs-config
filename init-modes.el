@@ -242,4 +242,7 @@
 ;; Bookmarks+
 (setq bmkp-last-as-first-bookmark-file "~/.emacs.d/etc/bookmarks")
 
+;; Ruby stuff.
+(add-to-list 'ac-modes 'enh-ruby-mode)
+
 (provide 'init-modes)

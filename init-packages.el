@@ -27,7 +27,9 @@
     dummy-h-mode
     edit-server
     emacs-eclim
+    enh-ruby-mode
     erc-image
+    ido-hacks
     fill-column-indicator
     find-file-in-repository
     flx
@@ -44,7 +46,8 @@
     multiple-cursors
     pos-tip
     switch-window
-    yasnippet)
+    yasnippet
+    web-mode)
   "A list of packages to ensure are installed at launch.")
 
 ;; Function for determining if packages are installed.
