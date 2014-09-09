@@ -231,13 +231,13 @@
 
 ;; Clojure development.
 ;; Auto-complete with nrepl.
-(require 'ac-nrepl)
- (add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
- (add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
+(require 'ac-cider)
+ (add-hook 'cider-mode-hook 'ac-cider-setup)
+ (add-hook 'cider-interaction-mode-hook 'ac-cider-setup)
  (eval-after-load "auto-complete"
-   '(add-to-list 'ac-modes 'nrepl-mode))
+   '(add-to-list 'ac-modes 'cider-mode))
 ;; nrepl configuration.
-(add-hook 'nrepl-interaction-mode-hook 'nrepl-turn-on-eldoc-mode)
+(add-hook 'cider-interaction-mode-hook 'cider-turn-on-eldoc-mode)
 
 ;; Bookmarks+
 (setq bmkp-last-as-first-bookmark-file "~/.emacs.d/etc/bookmarks")
