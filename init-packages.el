@@ -48,7 +48,8 @@
     pos-tip
     switch-window
     yasnippet
-    web-mode)
+    web-mode
+    whitespace-cleanup-mode)
   "A list of packages to ensure are installed at launch.")
 
 ;; Function for determining if packages are installed.

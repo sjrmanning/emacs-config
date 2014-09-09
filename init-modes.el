@@ -12,8 +12,11 @@
 ;; Disable speedbar until it's fixed.
 (speedbar -1)
 
+;; Automatically clean whitespace on save.
+(global-whitespace-cleanup-mode)
+
 ;; Compilation-mode settings.
-(defun my-compilation-hook () 
+(defun my-compilation-hook ()
   "Ensure compile window is splitting vertically."
   (progn
     (if (not (get-buffer-window "*compilation*"))
@@ -171,13 +174,14 @@
 (add-hook 'term-exec-hook 'term-use-utf8)
 
 ;; Emacs-Eclim setup.
-(require 'eclim)
-(require 'eclimd)
-(global-eclim-mode)
+;; Disabled for now.
+;(require 'eclim)
+;(require 'eclimd)
+;(global-eclim-mode)
 
 ;; Add Eclim to autocomplete.
-(require 'ac-emacs-eclim-source)
-(ac-emacs-eclim-config)
+;(require 'ac-emacs-eclim-source)
+;(ac-emacs-eclim-config)
 
 ;; Compilation mode.
 ;; Auto-close successful compilation window.
@@ -206,11 +210,6 @@
 ;; Python hook (sets up pyflakes, jedi, etc.)
 (add-hook 'python-mode-hook
           (lambda ()
-            ;; Delete trailing whitespace on save with hook.
-            (add-hook 'local-write-file-hooks
-                      '(lambda()
-                         (save-excursion
-                           (delete-trailing-whitespace))))
             (electric-indent-mode -1)
             (set-fill-column 79)
             (fci-mode 1)
