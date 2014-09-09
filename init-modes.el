@@ -245,4 +245,8 @@
 ;; Ruby stuff.
 (add-to-list 'ac-modes 'enh-ruby-mode)
 
+;; ido-vertical
+(require 'ido-vertical-mode)
+(ido-vertical-mode t)
+
 (provide 'init-modes)

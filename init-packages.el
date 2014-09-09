@@ -14,7 +14,7 @@
 
 ;; Define what packages are required from package.el.
 (defvar required-packages
-  '(ac-nrepl
+  '(ac-cider
     ace-jump-mode
     ag
     android-mode
@@ -30,6 +30,7 @@
     enh-ruby-mode
     erc-image
     ido-hacks
+    ido-vertical-mode
     fill-column-indicator
     find-file-in-repository
     flx
