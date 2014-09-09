@@ -40,3 +40,6 @@ semanticdb/
 
 # Emacs-W3
 url/
+
+# Flycheck
+flycheck_*
