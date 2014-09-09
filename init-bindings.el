@@ -118,6 +118,9 @@
 ;; Find file in repository.
 (global-set-key (kbd "C-x f") 'find-file-in-repository)
 
+;; Sort-lines.
+(global-set-key (kbd "<f5>") 'sort-lines)
+
 ;; Android key-bindings.
 ;; android-build-and-run requires custom_rules.xml for run rule.
 ;; Re-defined using android-mode standard.
