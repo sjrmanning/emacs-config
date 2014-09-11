@@ -2,7 +2,7 @@
 ;; https://github.com/stafu/emacs-config
 
 ;; Prepare paths.
-(setq load-path (cons "~/.emacs.d/"       load-path))
+(setq load-path (cons "~/.emacs.d/init"   load-path))
 (setq load-path (cons "~/.emacs.d/lib"    load-path))
 (add-to-list 'custom-theme-load-path "~/.emacs.d/lib/color-themes")
 
