@@ -51,6 +51,9 @@
 (unless (file-exists-p "~/.emacs.d/etc/")
   (make-directory "~/.emacs.d/etc/"))
 
+;; Disable annoying lock files.
+(setq create-lockfiles nil)
+
 ;; Change bookmarks file location.
 (setq bookmark-file "~/.emacs.d/etc/bookmarks")
 
