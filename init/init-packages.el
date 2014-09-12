@@ -18,9 +18,11 @@
     ace-jump-mode
     ag
     android-mode
+    anzu
     auto-complete-clang-async
     autopair
     bookmark+
+    browse-kill-ring
     cider
     clojure-mode
     csharp-mode
@@ -29,8 +31,6 @@
     emacs-eclim
     enh-ruby-mode
     erc-image
-    ido-hacks
-    ido-vertical-mode
     fill-column-indicator
     find-file-in-repository
     flx
@@ -38,17 +38,21 @@
     flycheck
     flymake-python-pyflakes
     gist
+    git-gutter
     graphene
+    ido-hacks
+    ido-vertical-mode
     iedit
     jedi
     magit
     markdown-mode
     monky
+    monokai-theme
     multiple-cursors
     pos-tip
     switch-window
-    yasnippet
     web-mode
+    yasnippet
     whitespace-cleanup-mode)
   "A list of packages to ensure are installed at launch.")
 

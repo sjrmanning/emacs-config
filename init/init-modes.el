@@ -248,4 +248,14 @@
 (require 'ido-vertical-mode)
 (ido-vertical-mode t)
 
+;; Anzu
+(global-anzu-mode +1)
+(global-set-key (kbd "M-%") 'anzu-query-replace)
+(global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
+
+;; Git-gutter setup.
+(require 'git-gutter)
+(global-git-gutter-mode t)
+(git-gutter:linum-setup)
+
 (provide 'init-modes)
