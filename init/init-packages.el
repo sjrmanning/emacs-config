@@ -47,7 +47,6 @@
     magit
     markdown-mode
     monky
-    monokai-theme
     multiple-cursors
     pos-tip
     switch-window
