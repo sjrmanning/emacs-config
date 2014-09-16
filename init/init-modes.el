@@ -254,8 +254,7 @@
 (global-set-key (kbd "C-M-%") 'anzu-query-replace-regexp)
 
 ;; Git-gutter setup.
-(require 'git-gutter)
-(global-git-gutter-mode t)
-(git-gutter:linum-setup)
+(require 'git-gutter+)
+(global-git-gutter+-mode t)
 
 (provide 'init-modes)
