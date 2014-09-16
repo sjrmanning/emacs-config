@@ -38,7 +38,7 @@
     flycheck
     flymake-python-pyflakes
     gist
-    git-gutter
+    git-gutter+
     graphene
     ido-hacks
     ido-vertical-mode
