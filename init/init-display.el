@@ -11,7 +11,7 @@
 (defvar font-name "Source Code Pro")
 (defvar font-size (if (eq system-type 'windows-nt)
                       10
-                      14))
+                      13))
 (defvar font-string (format "%s-%d" font-name font-size))
 
 ;; Ensure font exists first.
