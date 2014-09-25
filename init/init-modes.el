@@ -258,4 +258,12 @@
 (global-git-gutter+-mode t)
 (git-gutter-fr+-minimal)
 
+;; Deft.
+(require 'deft)
+(setq deft-extension "org"
+      deft-directory "~/org/deft/"
+      deft-text-mode 'org-mode
+      deft-auto-save-interval 30.0
+      deft-use-filename-as-title t)
+
 (provide 'init-modes)

@@ -26,6 +26,7 @@
     cider
     clojure-mode
     csharp-mode
+    deft
     dummy-h-mode
     edit-server
     emacs-eclim

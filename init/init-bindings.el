@@ -121,6 +121,9 @@
 ;; Sort-lines.
 (global-set-key (kbd "<f5>") 'sort-lines)
 
+;; Deft mode.
+(global-set-key (kbd "M-<f1>") 'deft)
+
 ;; Android key-bindings.
 ;; android-build-and-run requires custom_rules.xml for run rule.
 ;; Re-defined using android-mode standard.
