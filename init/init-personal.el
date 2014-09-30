@@ -24,6 +24,9 @@
 ;; Eclim default workspace.
 (setq eclimd-default-workspace "~/Documents/EclipseWorkspace")
 
+;; Deft directory.
+(setq deft-directory "~/org/deft/")
+
 ;; Org-mode personal settings.
 (setq org-directory "~/Org")
 (setq org-default-notes-file (concat org-directory "/Notes.org"))
