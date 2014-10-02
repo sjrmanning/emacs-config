@@ -25,4 +25,7 @@
 (when (eq system-type 'windows-nt)
   (menu-bar-mode -1))
 
+;; Use a 2px bar cursor.
+(setq-default cursor-type '(bar . 2))
+
 (provide 'init-display)
