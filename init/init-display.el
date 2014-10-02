@@ -2,7 +2,8 @@
 ;; File: init-display.el
 ;; Look and feel related customisations.
 
-;; Monokai colour-theme.
+;; Monokai colour-theme and related settings.
+(setq monokai-distinct-fringe-background t)
 (load-theme 'monokai t)
 
 ;; Set custom font.
