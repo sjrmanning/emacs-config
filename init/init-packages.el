@@ -37,7 +37,7 @@
     flx
     flx-ido
     flycheck
-    flymake-python-pyflakes
+    flycheck-pos-tip
     gist
     git-gutter
     git-gutter-fringe

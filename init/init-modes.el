@@ -173,16 +173,6 @@
   (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))
 (add-hook 'term-exec-hook 'term-use-utf8)
 
-;; Emacs-Eclim setup.
-;; Disabled for now.
-;(require 'eclim)
-;(require 'eclimd)
-;(global-eclim-mode)
-
-;; Add Eclim to autocomplete.
-;(require 'ac-emacs-eclim-source)
-;(ac-emacs-eclim-config)
-
 ;; Compilation mode.
 ;; Auto-close successful compilation window.
 (setq compilation-exit-message-function 'compilation-exit-autoclose)
@@ -199,10 +189,6 @@
 (setq fci-rule-color "#292929")
 (setq fci-rule-width 1)
 
-;; Flymake setup.
-;; Displays flymake errors on cursor in a popup.el tip.
-(require 'flymake-popup)
-
 ;; Python config.
 ;; Jedi setup.
 (setq jedi:setup-keys t)
@@ -213,7 +199,6 @@
             (electric-indent-mode -1)
             (set-fill-column 79)
             (fci-mode 1)
-            (flymake-python-pyflakes-load)
             (jedi:setup)))
 
 ;; Common programming-mode settings.
@@ -263,5 +248,10 @@
       deft-text-mode 'org-mode
       deft-auto-save-interval 30.0
       deft-use-filename-as-title t)
+
+;; Flycheck-pos-tip setup.
+;; Shows flycheck error using popup.el.
+(require 'flycheck)
+(setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages)
 
 (provide 'init-modes)

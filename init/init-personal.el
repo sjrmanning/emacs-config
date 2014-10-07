@@ -43,7 +43,5 @@
 ;; Use zsh as default term shell.
 (setq explicit-shell-file-name "zsh")
 
-;; Use custom executable for python flymake (pyflakes + pep8)
-(setq flymake-python-pyflakes-executable "~/.emacs.d/lib/pycheck")
 
 (provide 'init-personal)
