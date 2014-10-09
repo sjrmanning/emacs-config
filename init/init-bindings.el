@@ -127,6 +127,9 @@
 ;; Silver Searcher (ag).
 (global-set-key (kbd "C-c s") 'ag)
 
+;; Expand region.
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; Android key-bindings.
 ;; android-build-and-run requires custom_rules.xml for run rule.
 ;; Re-defined using android-mode standard.

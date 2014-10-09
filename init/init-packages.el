@@ -30,6 +30,7 @@
     edit-server
     enh-ruby-mode
     erc-image
+    expand-region
     find-file-in-repository
     flx
     flx-ido
