@@ -15,15 +15,6 @@
 ;; Automatically clean whitespace on save.
 (global-whitespace-cleanup-mode)
 
-;; Compilation-mode settings.
-(defun my-compilation-hook ()
-  "Ensure compile window is splitting vertically."
-  (progn
-    (if (not (get-buffer-window "*compilation*"))
-        (progn
-          (split-window-vertically)))))
-(add-hook 'compilation-mode-hook 'my-compilation-hook)
-
 ;; Edit-server.
 ;; Provides editing from Chrome.
 (require 'edit-server)
@@ -163,24 +154,14 @@
 (yas--initialize)
 
 ;; Terminal modes settings.
-;; Disable yasnippet and autopair in term.
+;; Disable yasnippet in term.
 (add-hook 'term-mode-hook
           (lambda ()
-            (yas-minor-mode -1)
-            (autopair-mode 0)))
+            (yas-minor-mode -1)))
 ;; Use UTF-8 in term modes.
 (defun term-use-utf8 ()
   (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))
 (add-hook 'term-exec-hook 'term-use-utf8)
-
-;; Compilation mode.
-;; Auto-close successful compilation window.
-(setq compilation-exit-message-function 'compilation-exit-autoclose)
-(defun compilation-exit-autoclose (status code msg)
-  (when (and (eq status 'exit) (zerop code))
-    (bury-buffer)
-    (delete-window (get-buffer-window (get-buffer "*compilation*"))))
-  (cons msg code))
 
 ;; Numerical window-switching with C-x o.
 (require 'switch-window)
@@ -253,5 +234,13 @@
 ;; Shows flycheck error using popup.el.
 (require 'flycheck)
 (setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages)
+
+;; Browse-kill-ring with default bind (M-y).
+(require 'browse-kill-ring)
+(browse-kill-ring-default-keybindings)
+
+;; Ag settings.
+(require 'ag)
+(setq ag-highlight-search t)
 
 (provide 'init-modes)

@@ -124,6 +124,9 @@
 ;; Deft mode.
 (global-set-key (kbd "M-<f1>") 'deft)
 
+;; Silver Searcher (ag).
+(global-set-key (kbd "C-c s") 'ag)
+
 ;; Android key-bindings.
 ;; android-build-and-run requires custom_rules.xml for run rule.
 ;; Re-defined using android-mode standard.

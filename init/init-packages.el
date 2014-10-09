@@ -20,7 +20,6 @@
     android-mode
     anzu
     auto-complete-clang-async
-    autopair
     bookmark+
     browse-kill-ring
     cider
@@ -29,10 +28,8 @@
     deft
     dummy-h-mode
     edit-server
-    emacs-eclim
     enh-ruby-mode
     erc-image
-    fill-column-indicator
     find-file-in-repository
     flx
     flx-ido

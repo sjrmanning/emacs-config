@@ -21,9 +21,6 @@
             (add-to-list 'gud-jdb-classpath
                          "~/Dev/android-sdk-macosx/platforms/android-16/android.jar")))
 
-;; Eclim default workspace.
-(setq eclimd-default-workspace "~/Documents/EclipseWorkspace")
-
 ;; Deft directory.
 (setq deft-directory "~/org/deft/")
 
