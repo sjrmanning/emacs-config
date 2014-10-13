@@ -43,6 +43,7 @@
         kill-region-or-backward-word
         magit-stage-item
         markdown-enter-key
+        markdown-exdent-or-delete
         move-line-down
         move-line-up
         move-text-down

@@ -19,6 +19,7 @@
     ag
     android-mode
     anzu
+    auto-complete
     auto-complete-clang-async
     bookmark+
     browse-kill-ring
@@ -49,6 +50,7 @@
     monky
     multiple-cursors
     pos-tip
+    smooth-scrolling
     switch-window
     web-mode
     yasnippet
