@@ -1,3 +1,6 @@
+# Note
+This is no longer used, but I’ll keep it here for archival purposes. My new config is located [here](https://github.com/stafu/.emacs.d) - it’s much better, using `use-package`, and no longer has a dependency on graphene.
+
 Emacs Config
 ============
 
